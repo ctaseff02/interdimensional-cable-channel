@@ -23,6 +23,12 @@ class Cable:
             frequency_penalty=0,
             presence_penalty=0
         )
+        
 
-        #Print the response
-        print(completion.choices[0].text)
+
+        final_response = prompt + "\n\n" + completion.choices[0].text
+        
+
+        #WHY IS THIS RETURNINGN NULL
+        return final_response
+
