@@ -12,6 +12,6 @@ def crawl(keywords):
             feeder_threads=1,
             parser_threads=1,
             downloader_threads=1,
-            storage={'root_dir': r'main\bot\images'})
+            storage={'root_dir': r'main/bot/images'})
 
         google_crawler.crawl(keyword = image, max_num = 1, max_size=(1200, 1200))   
