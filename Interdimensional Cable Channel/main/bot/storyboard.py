@@ -29,7 +29,7 @@ def callai():
         keywords.append(character3)
     if "<setting2>" in situation:
         setting2 = settings[random.randint(0, settings.count())]
-        situation = situation.replace("<setting>", setting2)
+        situation = situation.replace("<setting2>", setting2)
         keywords.append(setting2)
 
     situation = situation.replace("<setting>", setting)
